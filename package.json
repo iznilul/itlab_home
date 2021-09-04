@@ -8,10 +8,11 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^1.6.0",
     "axios": "^0.21.1",
+    "element-plus": "^1.1.0-beta.8",
+    "vue-particles": "^1.0.9",
     "path": "^0.12.7",
     "vue": "^3.0.4",
-    "vue-router": "^3.0.6",
-    "vuex": "^3.1.2"
+    "vue-router": "^4.0.11"
   },
   "devDependencies": {
     "vite": "^2.0.3",
