@@ -5,8 +5,26 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    meta: { title: '实验室主页' },
-    component: () => import('../components/BaseLayout.vue'),
+    meta: { title: '主页' },
+    component: () => import('../views/Home.vue'),
+  },
+  {
+    path: '/joinus',
+    name: 'joinus',
+    meta: { title: '关于纳新' },
+    component: () => import('../views/JoinUs.vue'),
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    meta: { title: '我要报名' },
+    component: () => import('../views/SignUp.vue'),
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    meta: { title: '联系我们' },
+    component: () => import('../views/Contact.vue'),
   },
   {
     path: '/404',

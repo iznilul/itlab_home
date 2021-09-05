@@ -6,13 +6,16 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@element-plus/icons": "0.0.11",
     "@vitejs/plugin-vue": "^1.6.0",
+    "aos": "^2.3.4",
     "axios": "^0.21.1",
     "element-plus": "^1.1.0-beta.8",
-    "vue-particles": "^1.0.9",
+    "particles.vue3": "^1.17.0",
     "path": "^0.12.7",
-    "vue": "^3.0.4",
-    "vue-router": "^4.0.11"
+    "vue": "^3.2.8",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "vite": "^2.0.3",

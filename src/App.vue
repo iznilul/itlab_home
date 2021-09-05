@@ -1,12 +1,13 @@
 <template>
-  <router-view/>
+   <BaseLayout></BaseLayout>
 </template>
-z
 <script>
 
+import BaseLayout from "./components/BaseLayout";
 export default {
   name: 'App',
   components: {
+    BaseLayout
   }
 }
 </script>
