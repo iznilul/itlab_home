@@ -9,13 +9,15 @@
     import AContent from "./AContent";
     import AHeader from "./AHeader";
     import AFooter from "./AFooter";
-
     export default {
         name: "BaseLayout",
         components: {
             AFooter,
             AHeader,
             AContent
+        },
+        setup(){
+
         },
         data() {
             return {}

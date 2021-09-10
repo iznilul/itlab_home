@@ -16,11 +16,14 @@
 
 <script>
     import {Edit} from "@element-plus/icons"
-
+    import router from "../router";
     export default {
         name: "AHeader",
         component: {
             Edit
+        },
+        setup(){
+
         },
         computed: {
             menuItems() {
@@ -35,12 +38,7 @@
         methods: {
             handleSelect(path) {
                 console.log(path);
-                // if (name.includes('external-link')) return
-                // this.$emit('gotoPage', name)
-                // this.expandAside()
-                // setTimeout(() => {
-                //     this.$store.commit('setIsShowAsideTitles', true)
-                // }, 200)
+                router.push(path)
             }
         }
     }

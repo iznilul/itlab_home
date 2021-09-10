@@ -1,5 +1,6 @@
 <template>
-    <a>wrong</a>
+    <a>404错误</a>
+    <router-link :to="{name:'root'}">点击跳转</router-link>
 </template>
 
 <script>
