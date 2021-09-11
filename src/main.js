@@ -8,12 +8,10 @@ import store from "./store";
 import AOS from "aos";
 import "aos/dist/aos.css"
 import  "@element-plus/icons"
-// import "./permission"
-
 const app= createApp(App)
 app.use(router)
 app.use(store)
 app.use(ElementPlus)
-app.use(AOS)
 app.use(Particles3);
+app.use(AOS)
 app.mount('#app')

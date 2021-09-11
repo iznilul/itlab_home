@@ -1,8 +1,12 @@
 <template>
-    <router-view/>
-    <Particles
-            id="tsparticles"
-            :options="{
+    <div id="content">
+            <transition appear name="el-fade-in">
+                <router-view>
+                </router-view>
+            </transition>
+        <Particles
+                id="particles"
+                :options="{
                     fpsLimit: 50,
                     interactivity: {
                         detectsOn: 'canvas',
@@ -18,16 +22,17 @@
                             resize: true
                         },
                         modes: {
-                            bubble: {
-                                distance: 200,
-                                duration: 2,
-                                opacity: 0.8,
-                                size: 20
-                            },
+                            // bubble: {
+                            //     distance: 200,
+                            //     duration: 2,
+                            //     opacity: 0.8,
+                            //     size: 20
+                            // },
                             push: {
-                                quantity: 2
+                                quantity: 1
                             },
                             grab: {
+                                distance: 300,
                             }
                         }
                     },
@@ -37,7 +42,7 @@
                         },
                         links: {
                             color: '#23acde',
-                            distance: 250,
+                            distance: 300,
                             enable: true,
                             opacity: 0.7,
                             width: 1.5
@@ -64,11 +69,12 @@
                         },
                         size:{
                             value:3.5,
-                        }
+                        },
                     },
                     detectRetina: true
                 }"
-    ></Particles>
+        ></Particles>
+    </div>
 </template>
 
 <script>
@@ -77,6 +83,6 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="less">
+    @import "../style/AContent";
 </style>

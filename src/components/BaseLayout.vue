@@ -1,6 +1,6 @@
 <template>
     <div id="baseLayout">
-        <AHeader></AHeader>
+        <AHeader @gotoPage="gotoPage"></AHeader>
         <AContent></AContent>
         <AFooter></AFooter>
     </div>
@@ -9,6 +9,8 @@
     import AContent from "./AContent";
     import AHeader from "./AHeader";
     import AFooter from "./AFooter";
+    import router from "../router";
+
     export default {
         name: "BaseLayout",
         components: {
@@ -16,8 +18,13 @@
             AHeader,
             AContent
         },
-        setup(){
-
+        setup() {
+            const gotoPage = (path) => {
+                router.push(path)
+            };
+            return {
+                gotoPage
+            }
         },
         data() {
             return {}
@@ -25,6 +32,6 @@
     }
 </script>
 
-<style lang="less" scoped>
-@import "../style/BaseLayout.less";
+<style lang="less">
+    @import "../style/BaseLayout.less";
 </style>
