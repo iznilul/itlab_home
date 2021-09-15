@@ -26,7 +26,7 @@
             </el-form-item>
         </el-form>
         <div id="buttonList">
-            <el-button type="primary" @click="signUp('form')">报名</el-button>
+            <el-button type="primary" @click="signUp(form)">报名</el-button>
             <el-button type="primary" @click="reset()">重写</el-button>
             <el-button type="primary" @click="signUp('form')">查询结果</el-button>
         </div>
@@ -55,11 +55,11 @@
 
             })
             const reset = () => {
-                form.value.studentId = ''
-                form.value.name = ''
-                form.value.gender = ''
-                form.value.qq = ''
-                form.value.major = ''
+                // form.value.studentId = ''
+                // form.value.name = ''
+                // form.value.gender = ''
+                // form.value.qq = ''
+                // form.value.major = ''
                 form.value.profile = ''
             }
             return {
@@ -70,12 +70,18 @@
         },
         methods: {
             signUp(form) {
-                service.post("/api/common/signup", form)
-                    .then(resp => {
-                        alert(resp.data.message + " 请加qq群：8888298");
-                        this.$router.push("/");
+                console.log(form)
+                service.post({
+                    url:"/api/common/signup",
+                    data:form
+                })
+                    .then(res => {
+                        console.log(res)
+                        // alert(res.data.message + " 请加qq群：8888298");
+                        // this.$router.push("/");
                     })
                     .catch(error => {
+                        console.error(error)
                         alert("报名失败");
                     });
             },

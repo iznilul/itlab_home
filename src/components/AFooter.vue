@@ -1,6 +1,6 @@
 <template>
     <div id="footer">
-        <a>SDUT 信息技术实验室 2020-2021 有问题请联系QQ:1773950094</a>
+        <a>SDUT 软件孵化实验室 2020-2021 有问题请联系QQ:1773950094</a>
     </div>
 </template>
 
