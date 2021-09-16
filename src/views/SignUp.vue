@@ -34,9 +34,9 @@
 </template>
 
 <script>
-    import service from "../utils/request";
-    import {ref, reactive, unref} from 'vue';
-
+    import {ref} from 'vue';
+    import {ElNotification} from "element-plus";
+    import {signUp} from "../api/user";
     export default {
         name: "SignUp",
         data() {
@@ -55,11 +55,6 @@
 
             })
             const reset = () => {
-                // form.value.studentId = ''
-                // form.value.name = ''
-                // form.value.gender = ''
-                // form.value.qq = ''
-                // form.value.major = ''
                 form.value.profile = ''
             }
             return {
@@ -71,18 +66,21 @@
         methods: {
             signUp(form) {
                 console.log(form)
-                service.post({
-                    url:"/api/common/signup",
-                    data:form
-                })
-                    .then(res => {
+                signUp(form).then(res => {
                         console.log(res)
-                        // alert(res.data.message + " 请加qq群：8888298");
-                        // this.$router.push("/");
+                    ElNotification({
+                        title: '报名成功',
+                        message: res.data,
+                        type: 'success',
+                    });
                     })
                     .catch(error => {
-                        console.error(error)
-                        alert("报名失败");
+                        console.log(error)
+                        ElNotification({
+                            title: '错误',
+                            message: '这是一条错误的提示消息',
+                            type: 'error',
+                        });
                     });
             },
         }

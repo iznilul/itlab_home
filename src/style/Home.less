@@ -8,6 +8,17 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  #third{
+    .element-icon{
+      margin-left: auto;
+      margin-right: auto;
+      width: 50px;
+      height: 50px;
+      i{
+        font-size:50px
+      }
+    }
+  }
   div{
     color: #ffffff;
   }
@@ -17,7 +28,14 @@
   p{
     color: #ffffff;
     font-size: 18px;
-
+  }
+  .box-card{
+    background: #000000;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
   }
   #tab {
     position: fixed; // 关键
@@ -25,6 +43,9 @@
     top: 100px;
     left: 0;
     bottom: 50px;
+    .el-tabs__item{
+      font-size: 20px;
+    }
   }
   #step {
     position: fixed; // 关键
@@ -32,6 +53,9 @@
     top: 100px;
     right: 50px;
     bottom: 50px;
+    .el-step__title{
+      font-size: 20px;
+    }
   }
   .el-carousel__item h3 {
     color: #000000;
@@ -64,5 +88,7 @@
   .el-step__icon-inner{
     color: black;
   }
-
+  .el-tab-pane{
+    font-size: 18px;
+  }
 }

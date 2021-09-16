@@ -2,16 +2,17 @@
     <div id="home">
         <div id="first" >
             <h1>实验室介绍</h1>
-            <div style="display: flex;flex-direction: row;justify-content: center">
+            <div class="container">
             <div id="introduction" >
             <p >计算机学院软件孵化实验室，成立于2014年5月，致力于为学生提供综合素养的成长环境、为学生提供跨学科领域的实训平台、为学生提供技术方向引导的师资力量。</p>
             </div>
             <div id="logo" data-aos="zoom-in-up" data-aos-anchor="top-center">
-                <el-card style="width:450px;background:#000000;border:#000000;">
+                <el-card style="width:450px;
+                background: #000000;
+                border:#000000;">
                     <img
                             :src="logo"
                             style="width:400px;"
-
                     />
                 </el-card>
             </div>
@@ -20,7 +21,7 @@
         <div id="second">
             <h1>欢迎加入^v^</h1>
             <div data-aos="zoom-in-up">
-            <el-card class="box-card" style="background: #000000">
+            <el-card class="box-card">
             <p>或许你曾经痴迷于算法，在ACM集训队叱咤纷纭。或许对你来说写个小爬虫比上手王者荣耀还简单。或许你对大数据人工智能非常感兴趣。或许你对前端开发非常擅长, 能分分钟写个界面.</p>
             <p>或许你擅长使用Linux，能写出部分脚本。或许你对Java后端开发以及部分框架有着深入的理解。</p>
             <p>那么来加入我们吧，我们一起加油，一起搞项目。</p>
@@ -33,14 +34,11 @@
         <br>
         <div id="third">
             <h1>学习方向</h1>
-            <div style="display: flex;flex-direction: row;justify-content:center;">
+            <div class="container">
             <div class="h4" data-aos="flip-left">
-                <el-card class="box-card" style="background: #000000">
-                    <div style="margin-left: auto;
-                    margin-right: auto;
-                    width: 50px;
-                    height: 50px">
-                        <i class="el-icon-upload" style="font-size:50px"></i>
+                <el-card class="box-card">
+                    <div class="element-icon">
+                        <i class="el-icon-upload"></i>
                     </div>
                 <h3>Web前后端开发</h3>
                 <h4 class="text-grey px-0">Web program development</h4>
@@ -53,12 +51,9 @@
                 </el-card>
             </div>
             <div class="h4" data-aos="zoom-in-up">
-                <el-card class="box-card" style="background: #000000">
-                    <div style="margin-left: auto;
-                    margin-right: auto;
-                    width: 50px;
-                    height: 50px">
-                        <i class="el-icon-star-on" style="font-size:50px"></i>
+                <el-card class="box-card">
+                    <div class="element-icon">
+                        <i class="el-icon-star-on"></i>
                     </div>
                 <h3>科研技术的学习</h3>
                 <h4 class="text-grey px-0">Data development</h4>
@@ -68,12 +63,9 @@
                 </el-card>
             </div>
             <div class="h4" data-aos="flip-right">
-                <el-card class="box-card" style="background: #000000">
-                    <div style="margin-left: auto;
-                    margin-right: auto;
-                    width: 50px;
-                    height: 50px">
-                        <i class="el-icon-s-platform" style="font-size:50px"></i>
+                <el-card class="box-card">
+                    <div class="element-icon">
+                        <i class="el-icon-s-platform"></i>
                     </div>
                 <h3>网络安全与维护</h3>
                 <h4 class="text-grey px-0">Network security maintenance</h4>
@@ -90,18 +82,19 @@
         <br>
         <div id="fourth">
             <h1>主要比赛</h1>
-            <div style="display: flex;flex-direction: row;justify-content:center;flex-wrap: wrap">
+            <div class="container">
             <div data-aos="flip-left">
-                <el-card class="box-card" style="background: #000000">
+                <el-card class="box-card">
+                    <p class="font-weight-bold">
                     <a href="http://sw.sdusc.cn/index/index/index.html" target="_blank">山东省大学生软件设计大赛</a>
-                <!-- 加粗字体 -->
+                    </p>
                 <p>
                     山东省大学生软件设计大赛”（以下简称大赛）是山东省科协、省教育厅、山东省高教学会计算机教学研究专业委员会、济南市经信委、济南市商务局、齐鲁软件园发展中心主办，济南计算机学会、济南软件行业协会承办。山东计算机学会指导。它是面向全省高校计算机与信息专业在校大学生举办的年度性赛事。
                 </p>
                 </el-card>
             </div>
             <div data-aos="zoom-in-up">
-                <el-card class="box-card" style="background: #000000">
+                <el-card class="box-card">
                 <p class="font-weight-bold">
                     <a href="https://data.sdcloud.net/" target="_blank">济南“超算杯”(山东省大数据智能大赛)</a>
                 </p>
@@ -111,7 +104,7 @@
                 </el-card>
             </div>
             <div data-aos="flip-right">
-                <el-card class="box-card" style="background: #000000">
+                <el-card class="box-card">
                 <p class="font-weight-bold">
                     <a href="http://www.fwwb.org.cn/" target="_blank">中国大学生服务外包应用大赛</a>
                 </p>
@@ -143,13 +136,25 @@
             <p>&copy; 2020-2021 SDUT Information Technology Lab. All rights reserved.</p>
             <br/>
         </div>
-        <el-tabs id="tab" :tab-position="tabPosition" v-model="active" >
-            <el-tab-pane name="0" label="实验室介绍">实验室介绍</el-tab-pane>
-            <el-tab-pane name="1" label="欢迎加入">欢迎加入</el-tab-pane>
-            <el-tab-pane name="2" label="学习方向">学习方向</el-tab-pane>
-            <el-tab-pane name="3" label="主要比赛">主要比赛</el-tab-pane>
-            <el-tab-pane name="4" label="实验室照片">实验室照片</el-tab-pane>
-            <el-tab-pane name="5" label="友情链接">友情链接</el-tab-pane>
+        <br>
+        <br>
+        <el-tabs id="tab" :tab-position="tabPosition">
+            <el-tab-pane name="0" label="实验室介绍"><a href="#first">实验室介绍</a></el-tab-pane>
+            <br>
+            <br>
+            <el-tab-pane name="1" label="欢迎加入"><a href="#second">欢迎加入</a></el-tab-pane>
+            <br>
+            <br>
+            <el-tab-pane name="2" label="学习方向"><a href="#third">学习方向</a></el-tab-pane>
+            <br>
+            <br>
+            <el-tab-pane name="3" label="主要比赛"><a href="#fourth">主要比赛</a></el-tab-pane>
+            <br>
+            <br>
+            <el-tab-pane name="4" label="实验室照片"><a href="#fifth">实验室照片</a></el-tab-pane>
+            <br>
+            <br>
+            <el-tab-pane name="5" label="友情链接" ><a href="#sixth">友情链接</a></el-tab-pane>
         </el-tabs>
         <el-steps id="step" direction="vertical" :active="active-0">
             <el-step title="实验室介绍"></el-step>
@@ -172,24 +177,77 @@
     import img4 from "../assets/IMG_20210625_195142.9ac30b75.jpg"
     import img5 from "../assets/IMG_20210625_195150.1f6cc4f4.jpg"
     import logo from "../assets/softlab.png"
+    import {onMounted} from "@vue/runtime-core";
+    import {ref,reactive} from "vue"
     export default {
         name: "Home",
         setup() {
             AOS.init();
+            let list=reactive(["first","second","third","fourth","fifth","sixth"]);
+            const active=ref("");
+            let actives=reactive({
+                "first":"0",
+                "second":"1",
+                "third":"2",
+                "fourth":"3",
+                "fifth":"4",
+                "sixth":"5"});
+            const scrollHandle=(e)=>{
+                // 获取视窗高度
+                let domHeight = document.body.offsetHeight;
+                // console.log("视窗高度:"+domHeight)
+
+                // dom滚动位置
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                // console.log("dom滚动位置:"+scrollTop)
+
+                // 获取监听元素
+                let id=null;
+                // 获取监听元素本身高度
+                let scrollHeight=null;
+                // 获取监听元素距离视窗顶部距离
+                let offsetTop=null;
+                // 获取监听元素距离顶部高度-窗口高度
+                let top=null;
+                // 元素距离底部的高度+元素本身高度
+                let bottom=null;
+                list.map((i) => {
+                    id = document.getElementById(i);
+                    // console.log(id)
+                    scrollHeight = id.scrollHeight;
+                    // console.log("元素高度:"+scrollHeight)
+                    offsetTop = id.offsetTop;
+                    // console.log("元素绝对位置:"+offsetTop)
+                    top = offsetTop - domHeight > 0 ? offsetTop - domHeight : 0;
+                    // console.log("元素顶部:"+top)
+                    bottom = scrollHeight + offsetTop;
+                    // console.log("元素底部:"+bottom)
+                    // 页面滚动位置 > 元素距离顶部高度-窗口高度 && 页面滚动位置 < 元素距离顶部高度+元素本身高度
+                    if (scrollTop >= top && scrollTop <= bottom) {
+                        // console.log(active)
+                        // console.log('元素出现在可视区: ' + i);
+                        active.value=actives[i]
+                    }
+                });
+            };
+            onMounted(()=>{
+                window.addEventListener("scroll",scrollHandle)
+            });
+            return{
+                active
+            }
         },
+
         data() {
             return {
                 tabPosition: "left",
-                active: "5",
                 images: [
                     null, img4, img1, img2, img3, img, img5
                 ],
-                logo:logo
+                logo:logo,
             }
         },
-        mounted() {
 
-        }
     }
 </script>
 

@@ -15,7 +15,8 @@
     "path": "^0.12.7",
     "vue": "^3.2.8",
     "vue-router": "^4.0.11",
-    "vuex": "^4.0.0-rc.2"
+    "vuex": "^4.0.0-rc.2",
+    "@vue/runtime-core": "latest"
   },
   "devDependencies": {
     "vite": "^2.0.3",

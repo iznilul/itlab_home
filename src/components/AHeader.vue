@@ -25,7 +25,7 @@
         },
         setup(props,{ emit }){
             const handleClick = path => {
-                console.log(path)
+                // console.log(path)
                 // 子组件向父组件传参
                 emit('gotoPage',path);
             }
