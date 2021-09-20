@@ -9,7 +9,7 @@ export function signUp(data) {
   })
 }
 
-export function query(data) {
+export function Query(data) {
   return axios({
     url: api.query,
     method: 'get',

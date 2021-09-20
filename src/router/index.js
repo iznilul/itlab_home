@@ -41,11 +41,11 @@ import { createRouter,createWebHistory,createWebHashHistory} from "vue-router";
 //     path: "/:catchAll(.*)", // 不识别的path自动匹配home
 //     redirect: '/home',
 //   },
-//   // {
-//   //   path: "/404",
-//   //   name: '404',
-//   //   component: () => import('../components/404.vue'),
-//   // },
+//   {
+//     path: "/404",
+//     name: '404',
+//     component: () => import('../components/404.vue'),
+//   },
 // ]
 const routes=[
   {
@@ -71,6 +71,12 @@ const routes=[
     name: 'contact',
     meta: { title: '联系我们' },
     component: () => import('../views/Contact.vue'),
+  },
+  {
+    path: '/404',
+    name: '404',
+    meta: { title: '错误' },
+    component: () => import('../components/404.vue'),
   },
     {
     path: "/:catchAll(.*)", // 不识别的path自动匹配home

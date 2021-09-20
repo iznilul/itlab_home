@@ -1,6 +1,6 @@
 const api = {
   signUp: '/api/common/signUp',
-  query: '/api/admin/query',
+  query: '/api/common/querySignUp',
 }
 
 export default api
