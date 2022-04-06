@@ -11,7 +11,7 @@ $design_height: 824; //设计稿的高度，根据实际项目调整
   left:5%;
   margin: px2rem(12) px2rem(12) px2rem(12) px2rem(12);
   font-family: "Hiragino Sans GB", sans-serif;
-  font-size:px2rem(24);
+  font-size:px2rem(20);
   color: #d2e8ff;
 }
 .el-menu-demo {
@@ -27,7 +27,7 @@ $design_height: 824; //设计稿的高度，根据实际项目调整
   }
   li {
     margin: 0 px2rem(20);
-    font-size: px2rem(16);
+    font-size: px2rem(12);
     color: #d2e8ff;
   }
 }
